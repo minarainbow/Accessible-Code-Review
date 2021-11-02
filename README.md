@@ -8,7 +8,7 @@ Using while -loop, you should fill a list with these Fibonacci numbers
 which are less than 1000
 
 ### Examples
-evaluate fibonacci.py
+evaluate_fibonacci.py
 
 [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987]
 
