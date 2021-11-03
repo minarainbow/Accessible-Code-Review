@@ -1,4 +1,4 @@
-# For your information, refer this definition of Fibonacci number http://en.wikipedia.org/wiki/Fibonacci_number 
+# For your information, refer this definition of Fibonacci number http://en.wikipedia.org/wiki/Fibonacci_number
 # Using while -loop, you should fill a list with these Fibonacci numbers which are less than 1000
 
 # Examples
@@ -18,4 +18,3 @@ while k < 1000:
     j = k
     k = i + j
 print(fib_list)
-
