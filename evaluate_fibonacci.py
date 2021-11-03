@@ -6,15 +6,20 @@
 
 # We recommend you to start with two initial values, 0 and 1.
 
-fib_list = []
-i = 0
-j = 1
-fib_list.append(i)
-fib_list.append(j)
-k = i + j
-while k < 1000:
-    fib_list.append(k)
-    i = j
-    j = k
-    k = i + j
+
+# Required variables
+first_num = 0
+second_num = 1
+sum = first_num + second_num
+fib_list = [0, 1]
+
+# Loop body
+while sum < 1000:
+    fib_list.append(sum)
+    first_num = second_num
+    second_num = sum
+    sum = first_num + second_num
+
+
+# Print result
 print(fib_list)
