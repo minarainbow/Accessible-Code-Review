@@ -21,7 +21,7 @@ def drawing_integers(lb, ub, trials):
 
 
 # Test
-list1 = drawing_integers(6, 7, 1)
+list1 = drawing_integers(6, 10, 12)
 
 print(list1)
 
@@ -38,7 +38,7 @@ def average_integers(num_list):
     if(len(num_list) < 1):
         print("Please provide a non-empty list for input")
         return None
-    # main  logic
+    # main logic
     for i in num_list:
         sum = sum + i
     average = sum/len(num_list)
@@ -52,3 +52,20 @@ print(average_integers(list1))
 # Goal: Count the frequency of the integers in the list
 # Parameter: a list which is returned from drawing_integers
 # Return: A list of tuples that are the integer and its frequency Ex) [(1, 2), (2, 3), (3, 0), (4, 2)] for [4,1,2,2,4,2,1]
+
+def count_integers(num_list):
+    count_list = []
+    # check input condition
+    if(len(num_list) < 1):
+        print("Please provide a non-empty list for input")
+        return []
+    # main logic
+    min_num = min(num_list)
+    max_num = max(num_list)
+    for i in range(min_num, max_num+1):
+        counts = num_list.count(i)
+        count_list.append((i, counts))
+    return(count_list)
+
+# Test
+print(count_integers(list1))
