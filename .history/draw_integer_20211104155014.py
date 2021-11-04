@@ -21,7 +21,7 @@ def drawing_integers(lb, ub, trials):
 
 
 # Test
-list1 = drawing_integers(6, 7, 1)
+list1 = drawing_integers(6, 7, 0)
 
 print(list1)
 
@@ -35,9 +35,7 @@ print(list1)
 def average_integers(num_list):
     sum = 0
     # check input condition
-    if(len(num_list) < 1):
-        print("Please provide a non-empty list for input")
-        return None
+    if(len(num_list) < )
     # main  logic
     for i in num_list:
         sum = sum + i

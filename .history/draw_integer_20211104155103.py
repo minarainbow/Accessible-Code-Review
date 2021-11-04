@@ -21,7 +21,7 @@ def drawing_integers(lb, ub, trials):
 
 
 # Test
-list1 = drawing_integers(6, 7, 1)
+list1 = drawing_integers(6, 7, 0)
 
 print(list1)
 
