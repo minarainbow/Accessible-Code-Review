@@ -10,18 +10,18 @@ import random
 def drawing_integers(lb, ub, trials):
     drawing_list = []
     # check input condition
-    if lb > ub:
+    try:
+        for i in range(trials):
+            n = random.randint(lb, ub)
+            drawing_list.append(n)
+
+    except:
         print("Please check the input upperbound is same or larger than the input lowerbound.")
-        return []
-    # main logic
-    for i in range(trials):
-        n = random.randint(lb, ub)
-        drawing_list.append(n)
     return(drawing_list)
 
 
 # Test
-list1 = drawing_integers(6, 10, 12)
+list1 = drawing_integers(6, 10, 2)
 
 print(list1)
 
@@ -39,10 +39,14 @@ def average_integers(num_list):
         print("Please provide a non-empty list for input")
         return None
     # main logic
-    for i in num_list:
-        sum = sum + i
-    average = sum/len(num_list)
-    return(average)
+    try:
+        for i in num_list:
+            sum = sum + i
+        average = sum/len(num_list)
+        return(average)
+    except:
+        print("Please provide a non-empty list for input")
+        return None
 
 # Test
 print(average_integers(list1))
@@ -55,16 +59,15 @@ print(average_integers(list1))
 
 def count_integers(num_list):
     count_list = []
-    # check input condition
-    if(len(num_list) < 1):
-        print("Please provide a non-empty list for input")
-        return []
     # main logic
-    min_num = min(num_list)
-    max_num = max(num_list)
-    for i in range(min_num, max_num+1):
-        counts = num_list.count(i)
-        count_list.append((i, counts))
+    try:
+        min_num = min(num_list)
+        max_num = max(num_list)
+        for i in range(min_num, max_num+1):
+            counts = num_list.count(i)
+            count_list.append((i, counts))
+    except:
+        print("Please provide a non-empty list for input")
     return(count_list)
 
 # Test
